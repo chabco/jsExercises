@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // #1
+        function hello(name) {
+            document.write(`Hello, ${name}! Why you so ugly??????`)
+        }
+        
+        // hello('Charles');
+
+
+        // #2
+        let yourName = prompt('Name?')
+        yourName = yourName || `Hello world!`
+        // document.write(yourName);
+
+        // #3
+        function madlib(name, subject) {
+            document.write(`${name}'s favorite subject in school is ${subject}.`);
+        }
+        // madlib('Charles', 'fight club');
+
+        // #4
+        function tipAmount(amount, level) {
+            // if (level === 'good') {
+            //     let tip = amount * .2
+            //     return tip
+            // }
+            // else if (level === 'fair') {
+            //     let tip = amount * .15
+            //     return tip
+            // }
+            // else if (level === 'poor') {
+            //     let tip = amount * .1
+            //     return tip
+            // }
+
+            let tip = 
+                level === 'good'  ? amount * .2
+                    : level === 'fair'  ? amount * .15
+                        : level === 'poor'  ? amount *.1
+                            : amount * 0
+            return tip;
+        }
+        document.write(tipAmount(100, 'poor'));
+        // #5
+        function totalAmount(amount, level) {
+            total = amount + tipAmount(amount, level)
+            return total
+        }
+        // document.write(totalAmount(100, 'good'));
+
+        // #6
+        function splitAmount(amount, level, split) {
+            per = totalAmount(amount, level) / split
+            return per
+        } 
+    //    document.write(splitAmount(100, 'good', 2))
+    </script>
+</body>
+</html>
